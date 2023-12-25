@@ -19,7 +19,7 @@ const TaskCard = (props) => {
 
     return (
         <div className="flex justify-between w-full border-2 border-black rounded-md p-2 mt-3">
-            <div className="flex justify-center items-center space-x-2">
+            <div className="flex justify-center items-center space-x-3">
                 <div className={`flex justify-center items-center w-10 h-10 rounded-md font-bold cursor-pointer border-2 border-black  ${props.task.completed ? "bg-green-700" : ""} `} onClick={() => changeCompleted(props.task.title)}>
                     {props.task.completed ? "✓" : ""}
                 </div>
