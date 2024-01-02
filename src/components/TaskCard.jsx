@@ -3,8 +3,14 @@ import Button from "./elements/Button"
 const TaskCard = (props) => {
 
     const removeTask = (title) => {
-        const newTasks = props.tasks.filter((task) => task.title !== title)
-        props.setTasks(newTasks)
+        if (confirm(`Are you sure you want to delete task '${title}'?`)) {
+            const newTasks = props.tasks.filter((task) => task.title !== title)
+            props.setTasks(newTasks)
+            
+        }
+        // confirm(`Are you sure you want to delete ${title}?`)
+        // const newTasks = props.tasks.filter((task) => task.title !== title)
+        // props.setTasks(newTasks)
     }
 
     const changeCompleted = (title) => {
@@ -28,7 +34,7 @@ const TaskCard = (props) => {
                 </div>
             </div>
             <div className="flex justify-center items-center bg-slate-200">
-                <Button type="button" onClick={() => removeTask(props.task.title)} text="X" />
+                <Button type="button" color="bg-red-600" onClick={() => removeTask(props.task.title)} text="X" />
             </div>
         </div>
     )
