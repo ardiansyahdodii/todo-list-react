@@ -10,7 +10,7 @@ const App = () => {
   console.log(tasks)
 
   return (
-    <div className="container flex flex-col justify-center items-center md:px-48 mx-auto">
+    <div className="container flex flex-col justify-center items-center px-10 md:px-48 mx-auto">
       <div className="text-3xl font-bold mt-10">
         ToDo-List App
       </div>
